@@ -1,7 +1,8 @@
 <div style="padding-top: 5%" align="center">
-  <input #search type="text" class="form-control" placeholder="Procurar" name="q"
-  style="width: 50%;">
-  <button class="btn btn-default" type="submit" (click)="goToSearch(search.value)">
+  <input #search type="text" class="form-control" placeholder="Digite seu CPF" name="q" id="input"
+  >
+  <button class="btn btn-primary" type="submit" (click)="goToSearch(search.value)"
+  style="border-radius: 0%;">
     Procurar por CPF<i class="glyphicon glyphicon-search"></i>
   </button>
 </div>
