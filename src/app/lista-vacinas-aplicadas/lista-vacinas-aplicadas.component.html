@@ -1,0 +1,9 @@
+<div class="row">
+  <div class="col-md-12"><h1>Vacinas Aplicadas</h1></div>
+  <div class="col-md-12">
+    <div class="col-md-3" *ngFor="let vacina of vacinas">
+      <h3>{{ vacina.paciente.nome }}</h3>
+      <h5>{{ vacina.vacina.nome }}</h5>
+    </div>
+  </div>
+</div>
