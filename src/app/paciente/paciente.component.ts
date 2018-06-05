@@ -11,7 +11,7 @@ export class PacienteComponent implements OnInit {
 
   paciente = '';
   //_baseURL = 'http://localhost:8080/vacimune/api/vacinaAplicada/paciente/';
-  _baseURL = 'http://vacimune-api.herokuapp.com/api/vacinaAplicada/paciente/';
+  _baseURL = 'https://vacimune-api.herokuapp.com/api/vacinaAplicada/paciente/';
   
   constructor(private http:HttpClient, private route: ActivatedRoute) { }
 

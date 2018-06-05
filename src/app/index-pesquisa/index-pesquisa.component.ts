@@ -14,7 +14,7 @@ export class IndexPesquisaComponent implements OnInit {
   paciente = '';
   idPaciente = '';
   //_baseURL = 'http://localhost:8080/vacimune/api/vacinaAplicada/paciente/';
-  _baseURL = 'http://vacimune-api.herokuapp.com/api/vacinaAplicada/vacina/paciente/';
+  _baseURL = 'https://vacimune-api.herokuapp.com/api/vacinaAplicada/vacina/paciente/';
 
   constructor(private http:HttpClient, private route: ActivatedRoute, private router: Router) { }
 
