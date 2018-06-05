@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-md-12" *ngIf="paciente">
+      <div class="card text-center border-primary">
+        <div class="card-header bg-primary">
+          <h2>Dados do Paciente</h2>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{ paciente[0].paciente.nome | uppercase }}</h5>
+          <p class="card-text"> CPF: {{ paciente[0].paciente.cpf }}</p>
+          <p class="card-text"> Data de Nascimento: {{ paciente[0].paciente.dataNascimento }}</p>
+          <div class="card">
+            <div class="card-header"> Vacinas Aplicadas</div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Nome vacina:{{ paciente[0].vacina.nome}}</li>
+              <li class="list-group-item">Numero doses: {{ paciente[0].vacina.numeroDeDoses }}</li>
+            </ul>
+          </div>
+          <button class="btn btn-warning" disabled>Cadastrar EAPV (em breve)</button>
+        </div><br>
+      </div>
+    </div>
+</div>
