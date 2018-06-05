@@ -14,9 +14,6 @@ import { PacienteComponent } from './paciente/paciente.component';
 import { IndexPesquisaComponent } from './index-pesquisa/index-pesquisa.component';
 
 import { ChatbotComponent } from './chatbot/chatbot.component';
-//import { MessageListComponent } from './message-list/message-list.component';
-//import { MessageItemComponent } from './message-item/message-item.component';
-//import { MessageFormComponent } from './message-form/message-form.component';
 
 const routes:Routes = [
   {path:'vacinasaplicadas', component: ListaVacinasAplicadasComponent},
@@ -32,10 +29,7 @@ const routes:Routes = [
     ListaVacinasAplicadasComponent,
     PacienteComponent,
     IndexPesquisaComponent,
-    ChatbotComponent,
-    //MessageListComponent,
-    //MessageItemComponent,
-    //MessageFormComponent
+    ChatbotComponent
   ],
   imports: [
     BrowserModule,
