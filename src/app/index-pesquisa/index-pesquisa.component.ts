@@ -13,8 +13,9 @@ export class IndexPesquisaComponent implements OnInit {
 
   paciente = '';
   idPaciente = '';
-  //_baseURL = 'http://localhost:8080/vacimune/api/vacinaAplicada/paciente/';
-  _baseURL = 'https://vacimune-api.herokuapp.com/api/vacinaAplicada/vacina/paciente/';
+  //_baseURL = 'http://localhost:8080/vacimune/api/vacinaAplicada/vacina/paciente/';
+  //_baseURL = 'https://vacimune-api.herokuapp.com/api/vacinaAplicada/vacina/paciente/';
+  _baseURL = 'https://vacimune-api-dev.herokuapp.com/api/paciente/';
 
   constructor(private http:HttpClient, private route: ActivatedRoute, private router: Router) { }
 
@@ -24,7 +25,7 @@ export class IndexPesquisaComponent implements OnInit {
   goToSearch(search:string){
     this._baseURL = this._baseURL+search;
     return this.http.get<PacienteInterface>(this._baseURL).subscribe(data => {
-        const id = data[0].paciente.id;
+        const id = data.id;
         this.router.navigateByUrl('/paciente/'+id);
       });
   }

@@ -8,12 +8,13 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ListaVacinasAplicadasComponent implements OnInit {
 
+  _baseUrl = 'https://vacimune-api.herokuapp.com/api/vacinaAplicada';
   vacinas = [];
 
   constructor(private http:HttpClient) { }
 
   ngOnInit() {
-    this.http.get<any>('https://vacimune-api.herokuapp.com/api/vacinaAplicada')
+    this.http.get<any>(this._baseUrl)
     .subscribe(data => this.vacinas = data)
   }
 

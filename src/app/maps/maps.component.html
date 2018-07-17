@@ -1,0 +1,7 @@
+<h1>mapas</h1>
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+  <agm-marker [latitude]="lat" [iconUrl]="'http://maps.google.com/mapfiles/kml/pal3/icon61.png'" [longitude]="lng"> </agm-marker>
+  <agm-marker  *ngFor="let posto of postos" [latitude]="posto.latitude" [longitude]="posto.longitude">
+    <agm-info-window  > {{posto.nome}}  Telefone: {{posto.telefone}}</agm-info-window>
+  </agm-marker>
+</agm-map>

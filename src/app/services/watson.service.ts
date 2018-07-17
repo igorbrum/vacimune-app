@@ -6,7 +6,8 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class WatsonService {
 
-  private baseURL: string = "http://vacimune-api.herokuapp.com/api/chat";
+  //private baseURL: string = "http://vacimune-api-dev.herokuapp.com/api/chat";
+  private baseURL: string = "http://localhost:8080/vacimune/api/chat";
 
   constructor(private http: Http) { }
 

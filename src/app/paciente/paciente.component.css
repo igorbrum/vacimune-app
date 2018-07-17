@@ -1,0 +1,91 @@
+#b1{
+    background: #ffffff;
+}
+#mrVi{
+    height: 150px;
+    align-items: center;
+}
+h1{
+    text-align: center;
+}
+p{
+    text-align: center;
+}
+* { 
+	margin: 0; 
+	padding: 0; 
+}
+body { 
+	font: 14px/1.4 Georgia, Serif; 
+}
+#page-wrap {
+	margin: 50px;
+    text-align: center;
+    width: 70%;
+}
+p {
+	margin: 20px 0; 
+}
+
+	/* 
+	Generic Styling, for Desktops/Laptops 
+	*/
+	table { 
+		width: 100%; 
+		border-collapse: collapse;
+        margin-right: auto;
+        margin-left: auto;
+	}
+	/* Zebra striping */
+	tr:nth-of-type(odd) { 
+		background: #eee; 
+	}
+	th { 
+		background: #3a798c; 
+		color: white; 
+		font-weight: bold; 
+	}
+	td, th { 
+		padding: 6px; 
+	}
+	
+#tb2{
+    width: 65%;
+}
+
+#total {
+    display: flex;
+    padding-bottom: 45px;
+    margin-top: -20px;
+}
+
+#eapv {
+    margin-right: 25px;
+}
+
+.suptext {
+    font-size: 25px;
+}
+
+.inftext {
+    font-size: 50px;
+    margin-top: -25px;
+}
+
+#totalt {
+
+    font-size: 35px;
+}
+
+#totaln {
+    font-size: 65px;
+    margin-top: -20px;
+    margin-bottom: 0px;
+}
+
+#VIIMG {
+    padding-right: 80px;
+    padding-top: 10px;
+    width: 269px;
+    margin-bottom: -25px;
+}

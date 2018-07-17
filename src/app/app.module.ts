@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MatToolbarModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http'  
 import { Routes, RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 
@@ -14,13 +15,22 @@ import { PacienteComponent } from './paciente/paciente.component';
 import { IndexPesquisaComponent } from './index-pesquisa/index-pesquisa.component';
 
 import { ChatbotComponent } from './chatbot/chatbot.component';
+import { MessageFormComponent } from './chatbot/message-form/message-form.component';
+import { MessageListComponent } from './chatbot/message-list/message-list.component';
+import { MessageItemComponent } from './chatbot/message-item/message-item.component';
+import { MapsComponent } from './maps/maps.component';
+
+import 'rxjs/add/operator/map';
+import { AgmCoreModule } from '@agm/core';
+import { WatsonService } from './services/watson.service';
 
 const routes:Routes = [
   {path:'vacinasaplicadas', component: ListaVacinasAplicadasComponent},
   {path: 'paciente/:id', component: PacienteComponent},
   {path: 'paciente', component: PacienteComponent},
   {path: '', component: IndexPesquisaComponent},
-  {path: 'chatbot', component: ChatbotComponent}
+  {path: 'chatbot', component: ChatbotComponent},
+  {path: 'maps',component:MapsComponent}
 ]
 
 @NgModule({
@@ -29,7 +39,11 @@ const routes:Routes = [
     ListaVacinasAplicadasComponent,
     PacienteComponent,
     IndexPesquisaComponent,
-    ChatbotComponent
+    ChatbotComponent,
+    MessageFormComponent,
+    MessageListComponent,
+    MessageItemComponent,
+    MapsComponent
   ],
   imports: [
     BrowserModule,
@@ -38,9 +52,14 @@ const routes:Routes = [
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
+    HttpModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyApRJDSJ4Dd4KKRNNvSQWWdEkyDwZ2nNIo',
+      libraries: ["places"]
+    })
   ],
-  providers: [],
+  providers: [WatsonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
