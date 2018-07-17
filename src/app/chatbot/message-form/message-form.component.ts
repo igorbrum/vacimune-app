@@ -10,10 +10,10 @@ import { WatsonService } from '../../services/watson.service';
 export class MessageFormComponent implements OnInit {
 
   @Input('message')
-  private message : Message;
+  public message : Message;
 
   @Input('messages')
-  private messages : Message[];
+  public messages : Message[];
 
   constructor(private watsonService: WatsonService) { }
 
