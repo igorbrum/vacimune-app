@@ -2,15 +2,18 @@
     <div id="imp">
            <select class="imp">
              <option value="" disabled selected>Selecione um sintoma</option>
-             <option ngFor="let sintoma of sintomas" value="{{sintoma[0].nome}}">{{ sintoma[0].nome }}}</option>
+             <option value="">Dor de cabeça</option>
+             <option value="">Dor de estomago</option>
+             <option value="">Febre</option>
+             <option value="">Tontura</option>
            </select>
             
-           <select class="imp" ngFor="let vacina of vacinas">
+           <select class="imp" >
              <option value="" disabled selected>Selecione uma vacina</option>
-             <option value="{{vacina[0].id}}">{{vacina[0].nome}}</option>
-             <option value="{{vacina[1].id}}">{{vacina[1].nome}}</option>
-             <option value="{{vacina[2].id}}">{{vacina[2].nome}}</option>
-             <option value="{{vacina[3].id}}">{{vacina[3].nome}}</option>
+             <option value="volvo">H1N1</option>
+             <option value="saab">Sarampo</option>
+             <option value="opel">Gripe</option>
+             <option value="audi">HPV</option>
            </select>
     </div>
     <div>
