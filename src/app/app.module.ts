@@ -23,6 +23,7 @@ import { MapsComponent } from './maps/maps.component';
 import 'rxjs/add/operator/map';
 import { AgmCoreModule } from '@agm/core';
 import { WatsonService } from './services/watson.service';
+import { EapvComponent } from './eapv/eapv.component';
 
 const routes:Routes = [
   {path:'vacinasaplicadas', component: ListaVacinasAplicadasComponent},
@@ -30,7 +31,9 @@ const routes:Routes = [
   {path: 'paciente', component: PacienteComponent},
   {path: '', component: IndexPesquisaComponent},
   {path: 'chatbot', component: ChatbotComponent},
-  {path: 'maps',component:MapsComponent}
+  {path: 'maps',component:MapsComponent},
+  {path: 'eapv',component:EapvComponent}
+
 ]
 
 @NgModule({
@@ -43,7 +46,8 @@ const routes:Routes = [
     MessageFormComponent,
     MessageListComponent,
     MessageItemComponent,
-    MapsComponent
+    MapsComponent,
+    EapvComponent
   ],
   imports: [
     BrowserModule,

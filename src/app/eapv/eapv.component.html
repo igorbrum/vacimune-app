@@ -1,0 +1,36 @@
+<div class="corpo">
+    <div id="imp">
+           <select class="imp">
+             <option value="" disabled selected>Selecione um sintoma</option>
+             <option ngFor="let sintoma of sintomas" value="{{sintoma[0].nome}}">{{ sintoma[0].nome }}}</option>
+           </select>
+            
+           <select class="imp" ngFor="let vacina of vacinas">
+             <option value="" disabled selected>Selecione uma vacina</option>
+             <option value="{{vacina[0].id}}">{{vacina[0].nome}}</option>
+             <option value="{{vacina[1].id}}">{{vacina[1].nome}}</option>
+             <option value="{{vacina[2].id}}">{{vacina[2].nome}}</option>
+             <option value="{{vacina[3].id}}">{{vacina[3].nome}}</option>
+           </select>
+    </div>
+    <div>
+      <img id="VIIMG" src="https://i.imgur.com/KQEKOfq.png">
+    </div>
+    <div id="fundoForm">
+        <div id="vApl">
+          <p id="totalt">Total de vacinas aplicadas</p>
+          <p id="totaln">100</p>
+        </div>
+        <div id="total">
+          <div id="eapv">
+             <p class="suptext">Vacinas com EAPV</p>
+             <p class="inftext">50</p>
+          </div>
+
+          <div id="sEapv">
+             <p class="suptext">Vacinas sem EAPV</p>
+             <p class="inftext">50</p>
+          </div>
+        </div>
+    </div>
+</div>

@@ -27,6 +27,7 @@ export class PacienteComponent implements OnInit {
 
   getPaciente(id){
     this.http.get<any>(this._baseURLTomadas+id).subscribe(data =>this.paciente = data);
+    
   }
 
   getVacinasTomar(id){
